@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Recommendation</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #003366;
+            color: white;
+            padding: 15px 30px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav h2 {
+            margin-right: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .search-bar {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-bar input {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: white;
+            color: #003366;
+            font-weight: bold;
+        }
+
+        /* Home Section */
+        #home {
+            height: 90vh;
+
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            color: white;
+        }
+
+        .hero-text {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .hero-text h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 20px;
+        }
+
+        /* Sections */
+        section {
+            padding: 50px;
+        }
+
+        /* Results */
+        .results {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            margin-bottom: 10px;
+        }
+
+        /* About Section */
+        #about {
+            background-color: white;
+        }
+
+        #about h2 {
+            margin-bottom: 20px;
+        }
+
+        #about ul {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        #about li {
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #e9ecef;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            gap: 15px;
+        }
+
+        form input,
+        form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px;
+            border: none;
+            background-color: #003366;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+
+        <h2>TravelBloom</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search recommendations">
+            <button id="searchBtn">Search</button>
+            <button id="resetBtn">Clear</button>
+        </div>
+
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+
+        <div class="hero-text">
+            <h1>Explore Dream Destinations</h1>
+
+            <p>
+                Discover amazing beaches, temples, and countries around the world.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Results -->
+    <section>
+
+        <div id="results" class="results"></div>
+
+    </section>
+
+    <!-- About Us -->
+    <section id="about">
+
+        <h2>About Us</h2>
+
+        <p>
+            We help travelers discover the best destinations around the globe.
+            Our mission is to inspire unforgettable travel experiences.
+        </p>
+
+        <br>
+
+        <h3>Our Team</h3>
+
+        <ul>
+            <li>John Smith - CEO</li>
+            <li>Sarah Johnson - Travel Consultant</li>
+            <li>David Lee - Marketing Manager</li>
+        </ul>
+
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact">
+
+        <h2>Contact Us</h2>
+
+        <br>
+
+        <form>
+
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <textarea rows="6" placeholder="Your Message"></textarea>
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+    </section>
+
+    <script src="travel_recommendation.js"></script>
+
+</body>
+
+</html>
